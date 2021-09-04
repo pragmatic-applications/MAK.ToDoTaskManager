@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Lib_Generic_Crud_Interface" Version="0.0.0.2" />
+        <PackageReference Include="Lib_Http_Interface" Version="0.0.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\MAK.Lib.ToDoTaskManager.Domain\MAK.Lib.ToDoTaskManager.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

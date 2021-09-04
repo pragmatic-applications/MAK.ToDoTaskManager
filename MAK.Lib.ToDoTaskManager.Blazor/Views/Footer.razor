@@ -1,0 +1,39 @@
+﻿
+<footer class="container- text_center">
+    <div class="CallToActionContainer">
+        <div class="TintA pad_top_bottom_30">
+            <p class="CallToActionTextA pad_bottom_15"> @this.BisName</p>
+            <div class="footer_upper_container">
+                <Repeater @key="this" TEntity="MenuData" Entities="@this.BottomMenu">
+                    <Entity Context="url">
+                        <div>
+                            @if(string.IsNullOrWhiteSpace(url.RelativeUrl))
+                            {
+                            <NavLink href="" Match="NavLinkMatch.All" class="BtnB">
+                                @url.MenuTitle
+                            </NavLink>
+                            }
+                            else
+                            {
+                            <NavLink href=@url.RelativeUrl class="BtnB">
+                                @url.MenuTitle
+                            </NavLink>
+                            }
+                        </div>
+                    </Entity>
+                </Repeater>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer_lower_container">
+        <div class="footer_lower_items">
+            <NavLink href="/">
+                Home
+            </NavLink>
+            <p>
+                Copyright &copy; @DateTime.Now.Year @this.BisName
+            </p>
+        </div>
+    </div>
+</footer>

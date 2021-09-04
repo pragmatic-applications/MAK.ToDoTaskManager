@@ -1,0 +1,336 @@
+﻿
+#NavbarStripSmall
+{
+    display: block;
+    z-index: 100;
+}
+
+#NavbarStripSmall span
+{
+    display: block;
+    padding-top: 15px;
+    border: none;
+    color: #FFF;
+    z-index: 100;
+}
+
+@media(min-width: 768px)
+{
+    #NavbarStripSmall
+    {
+        display: none;
+    }
+}
+
+.NavBG
+{
+    background-color: #0e3f6f;
+}
+
+#sidebar
+{
+    display: block;
+    position: fixed;
+    background-color: rgba(9, 35, 66, 0.1);
+    left: -250px;
+    top: 49px;
+    width: 250px;
+    height: 260px;
+    overflow: auto;
+    z-index: 200;
+    transition: all 500ms;
+}
+
+#sidebar.active
+{
+    left: 0;
+}
+
+#sidebar.close
+{
+    left: -250px;
+}
+
+.icon-bar
+{
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 5px 0;
+}
+
+.icon-bar + .icon-bar
+{
+    margin-top: 4px;
+}
+
+.icon-bar.A
+{
+    background-color: #FFF;
+}
+
+.icon-bar.B
+{
+    background-color: #FFF;
+}
+
+#ToggleSidebar
+{
+    display: block;
+    z-index: 1000;
+}
+
+.HideOrShow
+{
+    display: none;
+    background-color: var(--ThemeBackgroundColor);
+}
+
+@media(min-width: 768px)
+{
+    .HideOrShow
+    {
+        display: block;
+    }
+}
+
+.MenuSide.Close
+{
+    width: 0;
+}
+
+.MenuSide
+{
+    width: 0;
+    left: -200px;
+    background-color: rgba(36, 82, 136, 0);
+    color: #FFF;
+    z-index: 9999;
+}
+
+.MenuSide.Open
+{
+    left: 0;
+    width: 100%;
+    color: #FFF;
+    z-index: 9999;
+    transition: all 300ms;
+}
+
+@media(min-width: 480px)
+{
+    .MenuSide.Open
+    {
+        left: 0;
+        width: 35%;
+        transition: all 300ms;
+    }
+}
+
+@media(min-width: 900px)
+{
+    .MenuSide.Open
+    {
+        left: 0;
+        width: 20%;
+        transition: all 300ms;
+    }
+}
+
+@media(min-width: 1024px)
+{
+    .MenuSide.Open
+    {
+        left: 0;
+        width: 15%;
+        transition: all 300ms;
+    }
+}
+
+.MenuMain
+{
+    width: 100%;
+}
+
+.MenuMain.Minus
+{
+    width: 100%;
+}
+
+@media(min-width: 480px)
+{
+    .MenuMain.Minus
+    {
+        width: 65%;
+        transition: all 300ms;
+    }
+}
+
+@media(min-width: 900px)
+{
+    .MenuMain.Minus
+    {
+        width: 80%;
+        transition: all 300ms;
+    }
+}
+
+@media(min-width: 1024px)
+{
+    .MenuMain.Minus
+    {
+        width: 85%;
+        transition: all 300ms;
+    }
+}
+
+.NavbarCustom
+{
+    background-color: #e3f2fd;
+}
+
+.MenuCenter
+{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.CloseMenu
+{
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    padding: 14px 6px;
+    letter-spacing: 2px;
+    border-radius: 0;
+    background-color: var(--ThemeBackgroundColor);
+    color: #FFF;
+    outline: none;
+    transition: all 0.5s ease;
+}
+
+.CloseMenu:focus,
+.CloseMenu:hover
+{
+    background-color: var(--ThemeBackgroundColorPseudo);
+    color: #FFF;
+    text-decoration: none;
+    outline: none;
+}
+
+.FixedHomeLogo
+{
+    display: block;
+    position: fixed;
+    width: auto;
+    margin: 0 auto;
+    padding: 0;
+    top: 0;
+    left: 40px;
+    border-radius: 0;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    z-index: 10000;
+    transition: all 0.5s ease;
+}
+
+.FixedHomeLogo:focus,
+.FixedHomeLogo:hover
+{
+    background-color: transparent;
+    color: #FFF;
+    text-decoration: none;
+    outline: none;
+}
+
+.MAK .navbar-nav .nav-link, .MAK .ThemeColor, .MAK a.ThemeColor
+{
+    color: #FFF;
+}
+
+.NavigationMenuButton
+{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 12px 6px 11px 6px;
+    background-color: var(--ThemeBackgroundColor);
+    color: #FFF;
+    border-radius: 0;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 10000;
+    transition: all 0.5s ease;
+}
+
+.NavigationMenuButton:active,
+.NavigationMenuButton:focus,
+.NavigationMenuButton:hover
+{
+    border: none;
+    background-color: var(--ThemeBackgroundColorPseudo);
+    color: #FFF;
+    outline: none;
+    text-decoration: none;
+}
+
+.nav_link a
+{
+    display: block;
+    color: #FFF;
+    outline: none;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.top_nav_container a
+{
+    padding: 15px 52px;
+    outline: none;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.sidebar a
+{
+    padding: 15px;
+    outline: none;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.nav_link
+{
+    display: block;
+    text-decoration: none;
+    outline: none;
+    margin: 0 auto;
+    padding: 0;
+    background-color: var(--ThemeBackgroundColor);
+    color: #FFF;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    transition: all 0.5s ease;
+}
+
+.sidebar .nav_link
+{
+    border-top: solid 2px #FFF;
+    outline: none;
+    text-decoration: none;
+}
+
+.nav_link:hover
+{
+    background-color: var(--ThemeBackgroundColorPseudo);
+    color: #FFF;
+    text-decoration: none;
+    outline: none;
+}

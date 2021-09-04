@@ -1,0 +1,26 @@
+﻿@page "/ToDoTaskManager/Admin"
+@page "/ToDoTaskManager/Admin/{Id:int}"
+
+@inherits ToDoTaskBase
+
+<Banner BannerTitleParameter="@this.BannerTitleValue" AppNameParameter="@this.AppNameValue" />
+
+<div class="center_max_width_lg">
+
+    @if(this.ToDoTaskDtos == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <CascadingValue Value="this.ToDoTaskDtos" Name="@nameof(CascadingData.ToDoTaskEntitiesParameterValue)" IsFixed="false">
+            <ToDoTaskAdminIndexContainer />
+        </CascadingValue>
+    }
+
+    <PageFeature OnSelectedPage="this.SelectedPage" OnSortChanged="this.SortChanged" OnSearchChanged="this.SearchChanged" PagerDataParameter="@this.PagerData" />
+
+</div>
+<div class="page-top">
+    <NavLink href="@ToDoTaskManagerPageRoute.ToDoTaskManagerAdmin" class="top"></NavLink>
+</div>

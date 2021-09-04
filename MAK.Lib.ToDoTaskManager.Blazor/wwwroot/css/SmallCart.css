@@ -1,0 +1,15 @@
+﻿
+.SmallCart
+{
+  position: fixed;
+  display: block;
+  right: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  padding: 4px;
+  z-index: 1000;
+  background-color: #0e3f6f;
+  color: #FFF;
+  font-size: 0.9rem;
+}

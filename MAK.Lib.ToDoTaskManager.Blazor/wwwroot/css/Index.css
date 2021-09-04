@@ -1,0 +1,369 @@
+﻿
+/*--- S NN -----------------*/
+
+@import url('Base.css');
+
+@import url('Flex.css');
+@import url('Grid.css');
+
+@import url('Navigation.css');
+@import url('Button.css');
+@import url('Form.css');
+@import url('Card.css');
+@import url('Spacing.css');
+@import url('Sort.css');
+@import url('Theme.css');
+@import url('Sizing.css');
+
+/*--- S NN ------------  -----*/
+/*@import url('PageFeature.css');*/
+/*@import url('RenderModeSwitch.css');*/
+/*@import url('SmallCart.css');*/
+
+@import url('Create.css');
+
+hr
+{
+    margin: 0 auto;
+    border: none;
+    background-color: transparent;
+}
+
+.BackgroundImg
+{
+    /* background: url('../Images/00.jpg') no-repeat center center; */
+    background: url('../Images/bg00.jpg') no-repeat fixed center center;
+    background-size: cover;
+
+
+    /* background: lightblue url("img_tree.gif") no-repeat fixed center; */
+}
+
+.banner_background_image
+{
+    background: url('/_content/MAK.Lib.BlazorUI/Images/00.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.BannerTextContainer
+{
+    max-width: 4.0rem;
+    margin: 0 auto;
+    padding: 0;
+    visibility: hidden;
+}
+
+@media(min-width: 768px)
+{
+    .BannerTextContainer
+    {
+        margin-top: 20px;
+    }
+}
+
+#AeeBannerText.AeeBannerText
+{
+    padding: 1px 0 2px 0;
+    border-radius: 20px;
+    background-color: transparent;
+    color: transparent;
+    margin-top: 20px;
+}
+
+.CurrentPageTitleTinted,
+.BannerLowerTint,
+.BannerLowerTintA,
+.BannerLowerTintB
+{
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: normal;
+}
+
+.current_page_title_background
+{
+    /*background: url('../Images/01.jpg') no-repeat center center;*/
+    /*background-size: cover;*/
+    background-color: #FFF;
+}
+
+.CurrentPageTitleTinted
+{
+    width: 100%;
+    margin: 0 auto;
+    padding: 14px 0;
+    color: #FFF;
+    color: #bb0101;
+    background-color: #c7c7c7;
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+}
+
+.BannerLowerTint
+{
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(189 189 189 / 75%);
+}
+
+.BannerLowerTintA
+{
+    margin: 0 auto;
+    padding: 10px;
+    color: #fff;
+    background-color: var(--BannerLowerTintA);
+    font-size: 1.0rem;
+}
+
+.BannerLowerTintB
+{
+    margin: 0 auto;
+    padding: 10px;
+    color: #000;
+    background-color: var(--BannerLowerTintB);
+}
+
+.PageHeaderCurrentPageTitle
+{
+    padding: 8px 0 15px 0;
+    background-color: #e7f7ff;
+    color: #e47804;
+}
+
+.PageItem.A
+{
+    background-color: #f5f5f5;
+}
+
+.PageItem.B
+{
+    background-color: #dfe2e6;
+}
+
+.CardBtn button
+{
+    display: block;
+    margin: 3px auto;
+}
+
+@media(min-width: 320px)
+{
+    .CardBtn button
+    {
+        display: inline-block;
+    }
+}
+
+/*--- S NN -----------------*/
+
+.HeaderExperienceTheWorld
+{
+    width: 100%;
+    margin: auto;
+    padding: 4px;
+    border-radius: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.HomeHeaderTextColor
+{
+    color: #FFF;
+}
+
+.priceList h4,
+.priceList h4
+{
+    text-align: center;
+}
+
+.priceList h4
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.priceList ul li
+{
+    background: #C2E8F5;
+    list-style: none;
+}
+
+.priceList ul li p
+{
+    padding: 4px 10px;
+    text-align: left;
+    font-weight: 800;
+}
+
+.priceList ul li p.currency
+{
+    padding: 0;
+    padding-top: 30px;
+    text-align: left;
+    font-weight: 800;
+}
+
+.session-heading
+{
+    letter-spacing: 1px;
+}
+
+.booking-external#timelyWidget
+{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+iframe
+{
+    overflow: scroll;
+    width: 1349px;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.BreakText
+{
+    word-break: break-all;
+}
+
+.questionnaireThanksResult
+{
+    width: 100%;
+    margin: 0 auto;
+    background: #353434;
+}
+
+.contactThanksData
+{
+    width: 90%;
+    margin: 0 auto;
+    background: #ffffff;
+    border-top: 30px solid #353434;
+    border-bottom: 30px solid #353434;
+}
+
+.contactThanksData h1
+{
+    margin: 0 auto;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.QuestionnaireFeedbackHeader,
+.QuestionnaireFeedbackFooter
+{
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px 0;
+    background: #F6791D;
+}
+
+.QuestionnaireFeedbackHeader h4
+{
+    padding-left: 20px;
+    text-align: left;
+    color: #ffffff;
+}
+
+.QuestionnaireFeedbackFooter h4
+{
+    padding-right: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.stageThreeBooking
+{
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.arrowPointingDown,
+.stageThreeBooking
+{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.stageThreeBooking.direction
+{
+    color: #0b69fc;
+}
+
+.arrowPointingDown span
+{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.arrowPointingDown.guest span
+{
+    padding-bottom: 50px;
+}
+
+h4.guest,
+h2.guest
+{
+    text-align: center;
+}
+
+h2.guest
+{
+    padding-bottom: 20px;
+}
+
+h4.guest
+{
+    padding-top: 20px;
+}
+
+.CourseSession
+{
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #557090;
+    color: #FFF;
+}
+
+/* --- TTT --- */
+
+.window_size_container
+{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #464646;
+    color: #fff;
+    width: 80%;
+}
+
+.info_container
+{
+    display: inline;
+    font-size: 2rem;
+    font-family: 'Segoe UI Light';
+}
+
+.window_stats
+{
+    margin-top: 0;
+    padding-bottom: 15px;
+    font-family: 'Segoe UI Light';
+    border-bottom: 1px solid #fff;
+}
+
+.card_item
+{
+    width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}

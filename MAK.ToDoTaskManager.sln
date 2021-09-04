@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Solution Items", "_Solution Items", "{6CA867BA-4523-4E4E-990A-B179BA30F60C}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		docs\Record.cs = docs\Record.cs
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAK.Lib.ToDoTaskManager.Blazor", "MAK.Lib.ToDoTaskManager.Blazor\MAK.Lib.ToDoTaskManager.Blazor.csproj", "{97D6ED51-F22B-453B-9C06-B7B539ED1227}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAK.Lib.ToDoTaskManager.Database", "MAK.Lib.ToDoTaskManager.Database\MAK.Lib.ToDoTaskManager.Database.csproj", "{A5F947F3-498D-41C8-B95B-F191BEBA9771}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAK.Lib.ToDoTaskManager.Domain", "MAK.Lib.ToDoTaskManager.Domain\MAK.Lib.ToDoTaskManager.Domain.csproj", "{45BF7828-87C6-47AE-8CA7-B81855ED39F3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAK.Lib.ToDoTaskManager.Interface", "MAK.Lib.ToDoTaskManager.Interface\MAK.Lib.ToDoTaskManager.Interface.csproj", "{931CE4CC-E76E-4215-A44B-E47AE7CFC3CA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAK.Lib.ToDoTaskManager.Repository", "MAK.Lib.ToDoTaskManager.Repository\MAK.Lib.ToDoTaskManager.Repository.csproj", "{3B9BD071-D517-43C7-AFD1-B7CA8EC0C143}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAK.ToDoTaskManager.ServerApi", "MAK.ToDoTaskManager.ServerApi\MAK.ToDoTaskManager.ServerApi.csproj", "{DDA2FBCA-2EFF-40C9-A614-6C48AEC84C21}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAK.ToDoTaskManager.BlazorServer", "MAK.ToDoTaskManager.BlazorServer\MAK.ToDoTaskManager.BlazorServer.csproj", "{FBF03638-43D8-4B0A-8E8D-04CF86A6381E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAK.ToDoTaskManager.BlazorService", "MAK.ToDoTaskManager.BlazorService\MAK.ToDoTaskManager.BlazorService.csproj", "{E96C3F56-C17D-483A-9916-BF94C8C79258}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAK.ToDoTaskManager.Wasm", "MAK.ToDoTaskManager.Wasm\MAK.ToDoTaskManager.Wasm.csproj", "{6EC7FC07-6B53-4297-A9A3-929A95B29003}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAK.ToDoTaskManager.WasmHost", "MAK.ToDoTaskManager.WasmHost\MAK.ToDoTaskManager.WasmHost.csproj", "{4CD01F67-DE44-4389-B92D-EAE07B3AED79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97D6ED51-F22B-453B-9C06-B7B539ED1227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D6ED51-F22B-453B-9C06-B7B539ED1227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D6ED51-F22B-453B-9C06-B7B539ED1227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D6ED51-F22B-453B-9C06-B7B539ED1227}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5F947F3-498D-41C8-B95B-F191BEBA9771}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5F947F3-498D-41C8-B95B-F191BEBA9771}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5F947F3-498D-41C8-B95B-F191BEBA9771}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5F947F3-498D-41C8-B95B-F191BEBA9771}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45BF7828-87C6-47AE-8CA7-B81855ED39F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45BF7828-87C6-47AE-8CA7-B81855ED39F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45BF7828-87C6-47AE-8CA7-B81855ED39F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45BF7828-87C6-47AE-8CA7-B81855ED39F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{931CE4CC-E76E-4215-A44B-E47AE7CFC3CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{931CE4CC-E76E-4215-A44B-E47AE7CFC3CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{931CE4CC-E76E-4215-A44B-E47AE7CFC3CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{931CE4CC-E76E-4215-A44B-E47AE7CFC3CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B9BD071-D517-43C7-AFD1-B7CA8EC0C143}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B9BD071-D517-43C7-AFD1-B7CA8EC0C143}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B9BD071-D517-43C7-AFD1-B7CA8EC0C143}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B9BD071-D517-43C7-AFD1-B7CA8EC0C143}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDA2FBCA-2EFF-40C9-A614-6C48AEC84C21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDA2FBCA-2EFF-40C9-A614-6C48AEC84C21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDA2FBCA-2EFF-40C9-A614-6C48AEC84C21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA2FBCA-2EFF-40C9-A614-6C48AEC84C21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBF03638-43D8-4B0A-8E8D-04CF86A6381E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBF03638-43D8-4B0A-8E8D-04CF86A6381E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBF03638-43D8-4B0A-8E8D-04CF86A6381E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBF03638-43D8-4B0A-8E8D-04CF86A6381E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E96C3F56-C17D-483A-9916-BF94C8C79258}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E96C3F56-C17D-483A-9916-BF94C8C79258}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E96C3F56-C17D-483A-9916-BF94C8C79258}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E96C3F56-C17D-483A-9916-BF94C8C79258}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EC7FC07-6B53-4297-A9A3-929A95B29003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EC7FC07-6B53-4297-A9A3-929A95B29003}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EC7FC07-6B53-4297-A9A3-929A95B29003}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EC7FC07-6B53-4297-A9A3-929A95B29003}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CD01F67-DE44-4389-B92D-EAE07B3AED79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CD01F67-DE44-4389-B92D-EAE07B3AED79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CD01F67-DE44-4389-B92D-EAE07B3AED79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CD01F67-DE44-4389-B92D-EAE07B3AED79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B145478E-9AC1-4192-8E7D-B3ADB62039C1}
+	EndGlobalSection
+EndGlobal

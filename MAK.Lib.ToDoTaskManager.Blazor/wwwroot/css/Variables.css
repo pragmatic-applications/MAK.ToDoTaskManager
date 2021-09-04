@@ -1,0 +1,59 @@
+﻿
+
+/* ---- TD BtnB ---- */
+
+:root
+{
+    --ThemeBackgroundColor: #222;
+    --ThemeBackgroundColorPseudo: #505050;
+    --ThemeBackgroundColorPseudo: #3e3e3e;
+    --ThemeColor: #FFF;
+    --ThemeColorPseudo: #FFE;
+    --TitleTint: rgba(0,0,0,0.8);
+    --BannerLowerTint: rgba(0,0,0,0.75);
+    --BannerLowerTintColor: #000;
+    --BannerLowerTint: rgba(255, 255, 255, 0.75);
+    --BannerLowerTintA: rgba(0,0,0,0.5);
+    --BannerLowerTintB: rgba(255, 255, 255, 0.75);
+    --ThemeA: #6d6d6d;
+    --ThemeAColor: #dadada;
+    --ThemeB: #fefefe;
+    --ThemeBColor: #313131;
+    --ImgLinkThemeSize: 150px;
+    --BtnRoound: 120px;
+    --main_max_width: 1200px;
+}
+
+@media(min-width: 768px)
+{
+    : root
+    {
+        --ImgLinkThemeSize: 200px;
+    }
+}
+
+
+
+/*
+
+.one
+{
+
+    background-color: var(--ThemeA);
+    color: var(--ThemeColor);
+
+    max-width: var(--main_max_width);
+    max-width: 1200px;
+
+    background-color: var(--ThemeA);
+    color: var(--ThemeAColor);
+
+    background-color: var(--ThemeB);
+    color: var(--ThemeBColor);
+
+    width: var(--BtnRoound);
+    height: var(--BtnRoound);
+
+}
+
+*/

@@ -1,0 +1,40 @@
+﻿
+.PagerFixed, .SearchFixed, .SortFixed
+{
+  position: fixed;
+  display: block;
+  z-index: 100;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.PagerFixed
+{
+  left: 0;
+  right: 0;
+  top: 100px;
+}
+
+.SearchFixed
+{
+  right: 0;
+  top: 10px;
+}
+
+.SortFixed
+{
+  right: 0;
+  top: 60px;
+  
+  
+}
+
+.SearchFixed .form-control,
+.SortFixed .form-control
+{
+  border-radius: 20px 0 0 20px;
+  min-width: 200px;
+  background-color: #0e3f6f;
+  border: 1px solid #0e3f6f;
+  color: #FFF;
+}

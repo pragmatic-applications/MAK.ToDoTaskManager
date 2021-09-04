@@ -1,0 +1,51 @@
+﻿
+.max_width_100_px,
+.max_width_sm,
+.max_width_md,
+.center_max_width_lg,
+.max_width_xl
+{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.max_width_sm
+{
+    max-width: 400px;
+}
+
+.max_width_md
+{
+    max-width: 768px;
+}
+
+.center_max_width_lg
+{
+    max-width: 1600px;
+}
+
+.max_width_xl
+{
+    max-width: 1800px;
+}
+
+.max_width_100_px
+{
+    max-width: 100px;
+}
+
+.width_100_pc
+{
+    width: 100%;
+}
+
+.width_50_pc
+{
+    width: 50%;
+}
+
+.width_25_pc
+{
+    width: 25%;
+}
+

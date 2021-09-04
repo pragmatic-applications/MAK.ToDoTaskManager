@@ -1,0 +1,114 @@
+﻿
+.carousel
+{
+    border-radius: 0;
+}
+
+.carousel-main-wide
+{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#carousel-main-wide.carousel
+{
+    background: transparent;
+    background: rgba(0, 0, 0, 0);
+}
+
+#carousel-main-wide .carousel-inner
+{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#carousel-main-wide .carousel-inner .item
+{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#carousel-main-wide .carousel-inner .item img
+{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#carousel-main-wide .carousel-inner .item .carousel-caption
+{
+    top: 5%;
+}
+
+#carousel-main-wide .carousel-inner .item .carousel-caption h2, 
+#carousel-main-wide .carousel-inner .item .carousel-caption h4, 
+#carousel-main-wide .carousel-inner .item .carousel-caption p
+{
+    color: #000;
+}
+
+.carousel-inner
+{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.carousel-inner .item
+{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+}
+
+.carousel-inner .item img
+{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+}
+
+.carousel.fade
+{
+    opacity: 1;
+}
+
+.carousel.fade .item
+{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: opacity ease-out 0.7s;
+    opacity: 0;
+}
+
+.carousel.fade .item:first-child
+{
+    top: auto;
+    opacity: 0;
+    position: relative;
+}
+
+.carousel.fade .item.active
+{
+    opacity: 1;
+}
+
+.carousel-control
+{
+    opacity: 0;
+}
+
+.carousel-control.right, .carousel-control.left
+{
+    background-image: none;
+}

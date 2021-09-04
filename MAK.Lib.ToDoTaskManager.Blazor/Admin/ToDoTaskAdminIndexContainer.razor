@@ -1,0 +1,32 @@
+﻿@inherits Component
+
+<p class="text table">
+    <a class="btn btn_primary btn_sm" href="@ToDoTaskManagerPageRoute.ToDoTaskManagerAdminCreate">
+        Create
+    </a>
+</p>
+
+<div class="card_group margin_top_bottom_5">
+    <div class="@CssData.CardGroupCss">
+        <Repeater TEntity="ToDoTaskDto" Entities="@this.EntitiesCascadingParameter">
+            <Entity Context="item">
+                <Card TEntity="ToDoTaskDto" class="card">
+                    <CardHeader TEntity="ToDoTaskDto" Css="card_header">
+                        ID: #@this.GetId(item)
+                    </CardHeader>
+                    <CardBody TEntity="ToDoTaskDto" Css="card_body_1">
+                        <CardText TEntity="ToDoTaskDto">
+                            Title: @item.Title
+                        </CardText>
+                        <CardLink TEntity="ToDoTaskDto" LinkUrl="@this.GetLink(item)" Css="@CssData.CardLinkCssCascadingValueThemeBlueB">
+                            Detail
+                        </CardLink>
+                    </CardBody>
+                    <CardFooter TEntity="ToDoTaskDto" Css="card_footer">
+                        Complete: @this.GetState(item)
+                    </CardFooter>
+                </Card>
+            </Entity>
+        </Repeater>
+    </div>
+</div>

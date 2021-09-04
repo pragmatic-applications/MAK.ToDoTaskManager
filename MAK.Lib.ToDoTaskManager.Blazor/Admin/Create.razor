@@ -1,0 +1,97 @@
+﻿@page "/ToDoTaskManager/Admin/Create"
+
+@inherits ToDoTaskBase
+
+<Banner BannerTitleParameter="@this.BannerTitleValue" AppNameParameter="@this.AppNameValue" />
+
+<div class="container_basic">
+    <h5 class="text_center">@this.FormTitle</h5>
+    <p>Add entries to create a list of tasks. Items can be checked and removed from a created list. You can undo and redo operations. Click Save to store entries in the database.</p>
+
+    <div class="@CssData.CardCssThemeBlueB">
+        <EditForm Model="@this.ToDoTaskDto" OnValidSubmit="@this.AddItem">
+            <DataAnnotationsValidator />
+
+            <div class="form_group">
+                <label for="Title" class="control_label">Title</label>
+                <InputText @bind-Value="this.ToDoTaskDto.Title" class="form_control" id="Title" placeholder="Title: Learn French or Pay Taxes" @onchange="(_) => this.FormFieldActionOnTitle()" />
+                <ValidationMessage For="@(() => this.ToDoTaskDto.Title)" />
+            </div>
+            <div class="form_group">
+                <label for="Detail" class="control_label">Detail</label>
+                <InputText @bind-Value="this.ToDoTaskDto.Detail" class="form_control" id="Detail" placeholder="Detail" @onchange="(_) => this.FormFieldActionOnDetail()" />
+                <ValidationMessage For="@(() => this.ToDoTaskDto.Detail)" />
+            </div>
+
+            <div class="form_group">
+                <input type="hidden" @bind="this.CategoryId" />
+                <label for="CategoryId" class="control_label">Category</label>
+                <InputSelect id="CategoryId" @bind-Value="@this.CategoryId" class="form_control">
+                    <option value="0">-- Select a Category --</option>
+                    @foreach(var item in this.Categories)
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                    @{
+                        this.ToDoTaskDto.ToDoTaskCategoryId = this.GetCategoryId(categoryId: this.CategoryId);
+                    }
+                </InputSelect>
+            </div>
+
+            <Uploader OnChange="this.AssignImageUrl" AcceptTypeList="@UIData.AcceptTypeList" Multiple="false" Css="@CssData.ImageUploaderCss" ToImageType="png" />
+
+            <div class="form_group">
+                <div class="grid_auto_fit">
+                    <Button OnClick="this.TaskService.Undo" Condition="@(!this.TaskService.CanUndo)" Css="@CssData.EditFormBtnThemeBlueDCss" LinkText="Undo" />
+                    <Button OnClick="this.TaskService.Redo" Condition="@(!this.TaskService.CanRedo)" Css="@CssData.EditFormBtnThemeBlueDCss" LinkText="Redo" />
+                    <Button OnClick="this.TaskService.RemoveDone" Condition="@(!this.TaskService.CanRemove)" Css="@CssData.EditFormBtnThemeBlueDCss" LinkText="Remove" />
+                    <Submit Condition="@this.CanAdd" Css="@CssData.EditFormBtnThemeBlueDCss" LinkText="Add" />
+                </div>
+            </div>
+            <div class="form_group">
+                @if(this.TaskService.Items.Count < 1)
+                {
+                    <h1>Add One or more Items to the list before saving.</h1>
+                    <p>A save button will appear.</p>
+
+                    <a class="@CssData.EditFormBtnThemeBlueDCss" href="@ToDoTaskManagerPageRoute.ToDoTaskManagerAdmin">
+                        Back to Admin Home
+                    </a>                    
+                }
+                else if(this.TaskService.Items.Count > 0)
+                {
+                    <div class="grid_auto_fit">
+                        <Button OnClick="this.InsertAsync" Condition="@this.CanSave" Css="@CssData.EditFormBtnThemeBlueDCss" LinkText="Save" />
+                        <LinkButton Url="@ToDoTaskManagerPageRoute.ToDoTaskManagerAdmin" Css="@CssData.EditFormBtnThemeBlueDCss">
+                            <UrlLink>
+                                Cancel
+                            </UrlLink>
+                        </LinkButton>
+                    </div>
+                }
+            </div>
+        </EditForm>
+        <div class="form_group">
+            <p>Entries</p>
+        </div>
+        <div class="checkboxes grid_col_repeat_4_1fr pad_bottom_20">
+            @foreach(var item in this.TaskService.Items)
+            {
+                var CheckboxId = Guid.NewGuid();
+                <label for="@CheckboxId" class="option_item">
+                    <input type="checkbox" @bind="@item.Complete" id="@CheckboxId" class="checkbox" />
+
+                    <span class="option_inner theme">
+                        <span class="tickmark"></span>
+                        <span class="name">
+                            @item.Title
+                        </span>
+                    </span>
+                </label>
+            }
+        </div>
+    </div>
+</div>
+<div class="page-top">
+    <NavLink href="@ToDoTaskManagerPageRoute.ToDoTaskManagerAdminCreate" class="top"></NavLink>
+</div>

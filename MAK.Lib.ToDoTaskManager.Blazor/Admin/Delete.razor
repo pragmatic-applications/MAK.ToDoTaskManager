@@ -1,0 +1,52 @@
+﻿@page "/ToDoTaskManager/Admin/Delete/{id:int}"
+
+@inherits ToDoTaskBase
+
+<Banner BannerTitleParameter="@this.BannerTitleValue" AppNameParameter="@this.AppNameValue" />
+
+<div class="container_basic">
+    @if(this.ToDoTaskDto?.Id == 0)
+    {
+        <h1>Nothing to Delete</h1>
+    }
+    else
+    {
+        <h5 class="text_center">@this.FormTitle</h5>
+
+        <EditForm Model="@this.ToDoTaskDto" OnValidSubmit="@this.DeleteAsync">
+            <DataAnnotationsValidator />
+            <input type="hidden" @bind="this.ToDoTaskDto.Id" />
+
+            <Card TEntity="ToDoTaskDto" class="card">
+                <ImageContainer ImageParameter="@this.ToDoTaskDto.Image" class="@CssData.FormFeedbackImageCss" />
+                <CardHeader TEntity="ToDoTaskDto" Css="card_header">
+                    ID: #@this.ToDoTaskDto.Id
+                </CardHeader>
+                <CardBody TEntity="ToDoTaskDto" Css="card_body_1">
+                    <CardText TEntity="ToDoTaskDto">
+                        Title: @this.ToDoTaskDto.Title
+                    </CardText>
+                    <CardText TEntity="ToDoTaskDto">
+                        Detail: @this.ToDoTaskDto.Detail
+                    </CardText>
+                    <CardText TEntity="ToDoTaskDto">
+                        Category Id: @this.ToDoTaskDto.ToDoTaskCategoryId
+                    </CardText>
+                    <CardText TEntity="ToDoTaskDto">
+                        Category: @this.ToDoTaskDto.TaskCategory
+                    </CardText>
+                    <CardText TEntity="ToDoTaskDto">
+                        Complete: @this.IsDone
+                    </CardText>
+                </CardBody>
+                <CardFooter TEntity="ToDoTaskDto" Css="card_link_group_xs card_link_group_md_2">
+                    <Button OnClick="this.GoBack" Css="@CssData.EditFormBtnThemeBlueDCss" LinkText="Back" />
+                    <Submit Css="btn btn_danger btn_sm" LinkText="Delete" />
+                </CardFooter>
+            </Card>
+        </EditForm>
+    }
+</div>
+<div class="page-top">
+    <NavLink href="@ToDoTaskManagerPageRoute.ToDoTaskManagerAdminDelete" class="top"></NavLink>
+</div>

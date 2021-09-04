@@ -1,0 +1,42 @@
+@page "/"
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="TechSolution" />
+    <meta name="keywords" content="TechSolution" />
+    <meta name="author" content="Content owner: Maurice A Kelly">
+    <title>To Do</title>
+    <base href="~/" />
+
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="MAK.ToDoTaskManager.BlazorService.styles.css" rel="stylesheet" />
+</head>
+<body>
+    <component type="typeof(MAK.ToDoTaskManager.BlazorService.App)" render-mode="ServerPrerendered" />
+
+    <div id="blazor-error-ui">
+        <environment include="Staging,Production">
+            An error has occurred. This application may no longer respond until reloaded.
+        </environment>
+        <environment include="Development">
+            An unhandled exception has occurred. See browser dev tools for details.
+        </environment>
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script src="_framework/blazor.server.js"></script>
+</body>
+</html>
+
+<!--
+
+Programmer: Maurice A Kelly
+Developed using Visual Studio, .NET 5.0, C#, Blazor, ASP.NET Core 5.0 Web API and other related technologies.
+
+-->

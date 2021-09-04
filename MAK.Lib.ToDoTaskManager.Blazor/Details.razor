@@ -1,0 +1,56 @@
+﻿@page "/ToDoTaskManager/details/{Id:int}"
+
+@inherits ToDoTaskBase
+
+<Banner BannerTitleParameter="@this.BannerTitleValue" AppNameParameter="@this.AppNameValue" />
+
+<div class="container_basic">
+
+    @if(this.ToDoTaskDto?.Id == 0)
+    {
+        <div class="card">
+            <div class="card_body">
+                <p class="card-text">No Item to show.</p>
+            </div>
+        </div>
+    }
+    else
+    {
+        <Card TEntity="ToDoTaskDto" class="card">
+            <ImageContainer ImageParameter="@this.ToDoTaskDto.Image" class="@CssData.FormFeedbackImageCss" />
+            <CardHeader TEntity="ToDoTaskDto" Css="card_header">
+                ID: #@this.ToDoTaskDto.Id
+            </CardHeader>
+            <CardBody TEntity="ToDoTaskDto" Css="card_body_1">
+                <CardText TEntity="ToDoTaskDto">
+                    Category Id: @this.ToDoTaskDto.ToDoTaskCategoryId
+                </CardText>
+                <CardText TEntity="ToDoTaskDto">
+                    Category: @this.ToDoTaskDto.TaskCategory
+                </CardText>
+                <CardText TEntity="ToDoTaskDto">
+                    Title: @this.ToDoTaskDto.Title
+                </CardText>
+                <CardText TEntity="ToDoTaskDto">
+                    Detail: @this.ToDoTaskDto.Detail
+                </CardText>
+                <CardText TEntity="ToDoTaskDto">
+                    Created Date: @this.ToDoTaskDto.CreatedDate.Date
+                </CardText>
+                <CardText TEntity="ToDoTaskDto">
+                    Complete: @this.IsDone
+                </CardText>
+            </CardBody>
+            <CardFooter TEntity="ToDoTaskDto" Css="card_link_group_xs">
+                <LinkButton Url="@ToDoTaskManagerPageRoute.ToDoTaskManager" Css="@CssData.EditFormBtnThemeBlueDCss">
+                    <UrlLink>
+                        Back
+                    </UrlLink>
+                </LinkButton>
+            </CardFooter>
+        </Card>
+    }
+</div>
+<div class="page-top">
+    <NavLink href="@ToDoTaskManagerPageRoute.ToDoTaskManagerDetails" class="top"></NavLink>
+</div>

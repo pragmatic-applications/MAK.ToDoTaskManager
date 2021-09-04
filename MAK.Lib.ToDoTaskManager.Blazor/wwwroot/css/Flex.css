@@ -1,0 +1,21 @@
+﻿
+.CenterA,
+.container_flex
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #FFF;
+    color: #000;
+}
+
+.container_flex_center
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+

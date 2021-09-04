@@ -1,0 +1,118 @@
+﻿@page "/ToDoTaskManager/Admin/Update/{Id:int}"
+
+@inherits ToDoTaskBase
+
+<Banner BannerTitleParameter="@this.BannerTitleValue" AppNameParameter="@this.AppNameValue" />
+
+<div class="container_basic">
+
+    @if(this.ToDoTaskDto?.Id == 0)
+    {
+        <div class="card">
+            <div class="card_body">
+                <p class="card_text">No Item to edit.</p>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="EditForm">
+            <EditForm Model="@this.ToDoTaskDto" OnValidSubmit="@this.UpdateAsync">
+
+                <div class="@CssData.CardCssThemeBlueB form_section- margin_bottom_10">
+                    <DataAnnotationsValidator />
+                    <input type="hidden" @bind="this.ToDoTaskDto.Id" />
+
+                    <div class="form_group">
+                        <label for="Title" class="control_label">Title</label>
+                        <InputText @bind-Value="this.ToDoTaskDto.Title" id="Title" class="form_control" placeholder="Title"></InputText>
+                        <ValidationMessage For="@(() => this.ToDoTaskDto.Title)" />
+                    </div>
+                    <div class="form_group">
+                        <label for="Detail" class="control_label">Detail</label>
+                        <InputText @bind-Value="this.ToDoTaskDto.Detail" id="Detail" class="form_control" placeholder="Detail"></InputText>
+                        <ValidationMessage For="@(() => this.ToDoTaskDto.Detail)" />
+                    </div>
+                    <div class="form_group">
+                        <input type="hidden" @bind="this.CategoryId" />
+                        <label for="ToDoTaskCategoryId" class="control_label">Category</label>
+                        <InputSelect @bind-Value="@this.CategoryId" id="ToDoTaskCategoryId" class="form_control">
+                            <option value="0">-- Select a Category --</option>
+
+                            @foreach(var item in this.Categories)
+                                {
+                                <option value="@item.Id">@item.Name</option>
+                                }
+
+                            @{
+                                    this.ToDoTaskDto.ToDoTaskCategoryId = this.GetCategoryId(categoryId: this.CategoryId);
+                                    this.CurrentCategoryId = this.GetCategoryId(categoryId: this.CategoryId);
+                            }
+                        </InputSelect>
+                    </div>
+
+                    <div class="form_group checkboxes grid_col_repeat_1_1fr">
+                        <label for="@this.ToDoTaskDto.Id" class="control_label option_item">
+                            <InputCheckbox @bind-Value="this.ToDoTaskDto.Complete" class="checkbox" id="@this.ToDoTaskDto.Id" />
+                            <span class="option_inner theme">
+                                <span class="tickmark"></span>
+                                <span class="name">
+                                    Complete
+                                </span>
+                            </span>
+
+                            <ValidationMessage For="@(() => this.ToDoTaskDto.Complete)" />
+                        </label>
+                    </div>
+
+                    <Uploader OnChange="this.AssignImageUrl" AcceptTypeList="@UIData.AcceptTypeList" Multiple="false" Css="@CssData.ImageUploaderCss" ToImageType="png" />
+
+                    <div class="form_group">
+                        <div class="grid_auto_fit">
+                            <Button OnClick="this.GoBack" Css="@CssData.EditFormBtnThemeBlueDCss" LinkText="Back" />
+                            <Submit Condition="@this.IsDisabled" Css="@CssData.EditFormBtnThemeBlueDCss" LinkText="Save" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form_feedback_section margin_bottom_10">
+                    <div class="form_group">
+                        <ImageContainer ImageParameter="@this.ToDoTaskDto.Image" class="@CssData.FormFeedbackImageCss" />
+                    </div>
+                    <div class="form_group">
+                        <p>
+                            ID: #@this.ToDoTaskDto.Id
+                        </p>
+                    </div>
+                    <div class="form_group">
+                        <p>
+                            Title: @this.ToDoTaskDto.Title
+                        </p>
+                        <p>
+                            Detail: @this.ToDoTaskDto.Detail
+                        </p>
+                    </div>
+
+                    @if(this.CurrentCategoryId > 0 && this.CurrentCategoryId < 4)
+                    {
+                        <div class="form_group">
+                            <p>Category Id: @this.GetCategoryFeedback().Id</p>
+                            <p>Category: @this.GetCategoryFeedback().Category</p>
+                        </div>
+                    }
+
+                    <div class="form_group">
+                        <p>
+                            Complete: @this.IsDone
+                        </p>
+                    </div>
+                </div>
+            </EditForm>
+        </div>
+    }
+</div>
+
+<div class="page-top">
+    <NavLink href="@ToDoTaskManagerPageRoute.ToDoTaskManagerAdminUpdate" class="top"></NavLink>
+</div>

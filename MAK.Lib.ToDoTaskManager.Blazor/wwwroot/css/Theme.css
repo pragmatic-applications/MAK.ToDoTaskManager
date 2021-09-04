@@ -1,0 +1,100 @@
+﻿
+.border_success
+{
+    border: solid 1px #6f826f;
+}
+
+.text_white
+{
+    color: #FFF;
+}
+
+.text_theme_blue_b
+{
+    color: #002c50;
+}
+.theme_blue_btn
+{
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.theme_blue_a
+{
+    background: #8cafd0;
+    border: solid 1px #FFF;
+}
+.btn_theme_blue_a
+{
+    background: #678eb3;
+    color: #FFF;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.btn_theme_blue_a:active,
+.btn_theme_blue_a:hover,
+.btn_theme_blue_a:focus
+{
+    background: #7fa3bd;
+}
+
+.theme_blue_b
+{
+    background: #f3f6fd;
+    /*border: solid 1px #a5bbce;*/
+}
+
+/*.btn_theme_blue_b
+{
+    background: #d2e6f7;
+    border: solid 1px #8cafd0;
+    outline: none;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}*/
+
+.btn_theme_blue_b
+{
+    background: #dfe3ec;
+    outline: none;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.btn_theme_blue_b:active,
+.btn_theme_blue_b:hover,
+.btn_theme_blue_b:focus
+{
+    background: #bed7e8;
+}
+
+.theme_green_a
+{
+    background: #bbca9b;
+    color: #FFF;
+    color: #000;
+    border: solid 1px #FFF;
+}
+.theme_green_a_btn
+{
+    background: #a9b78a;
+    color: #FFF;
+    color: #000;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.theme_green_a_btn:active,
+.theme_green_a_btn:hover,
+.theme_green_a_btn:focus
+{
+    background: #afbe8f;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}

@@ -1,0 +1,53 @@
+﻿<p id="ToggleSidebar" class="ModalMenuButtonContainer toggle-btn LARGE" @onclick="MenuState.ToggleNavMenu">
+    <button class="NavigationMenuButton">
+        <span class="icon-bar A"></span>
+        <span class="icon-bar A"></span>
+        <span class="icon-bar A"></span>
+    </button>
+</p>
+
+<HomeButton />
+
+<header class="HideOrShow MAK">
+    <div id="close_menu" class="navbar-nav top_nav_container">
+        <Repeater @key="this" TEntity="MenuData" Entities="@this.TopMenu">
+            <Entity Context="url">
+                <div class="nav_link">
+                    @if(string.IsNullOrWhiteSpace(url.RelativeUrl))
+                    {
+                        <NavLink href="" Match="NavLinkMatch.All" @onclick="MenuState.CloseMenu">
+                            @url.MenuTitle
+                        </NavLink>
+                    }
+                    else
+                    {
+                        <NavLink href=@url.RelativeUrl @onclick="MenuState.CloseMenu">
+                            @url.MenuTitle
+                        </NavLink>
+                    }
+                </div>
+            </Entity>
+        </Repeater>
+    </div>
+</header>
+
+<div id="sidebar" class="sidebar_container sidebar @MenuState.SidebarCss" role="navigation" @onclick="MenuState.ToggleNavMenu">
+    <Repeater @key="this" TEntity="MenuData" Entities="@this.Menu">
+        <Entity Context="url">
+            <div class="nav_link">
+                @if(string.IsNullOrWhiteSpace(url.RelativeUrl))
+                {
+                    <NavLink href="" Match="NavLinkMatch.All" class="nav-link NavLink">
+                        @url.MenuTitle
+                    </NavLink>
+                }
+                else
+                {
+                    <NavLink href=@url.RelativeUrl class="nav-link NavLink">
+                        @url.MenuTitle
+                    </NavLink>
+                }
+            </div>
+        </Entity>
+    </Repeater>
+</div>

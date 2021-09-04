@@ -1,0 +1,10 @@
+﻿.sort_container
+{
+    position: fixed;
+    display: block;
+    z-index: 100;
+    max-width: 200px;
+    margin: 0 auto;
+    right: 20px;
+    top: 60px;
+}

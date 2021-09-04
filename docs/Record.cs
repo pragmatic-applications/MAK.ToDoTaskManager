@@ -1,0 +1,43 @@
+//=================================================================
+// Solution: MAK.ToDoTaskManager
+//=================================================================
+// Programmer: Maurice Antonio Kelly @MAKMaurice
+// Description: A collection of Computer Science projects implemented in .NET using C#.
+// ASP.NET Core 5.0
+// Date: 2021-09-04
+// Stop: 17:00
+//=================================================================
+
+// MAK.ToDoTaskManager.BlazorServer
+// MAK.ToDoTaskManager.BlazorService
+// MAK.ToDoTaskManager.Wasm
+// MAK.ToDoTaskManager.WasmHost
+
+//==========================================================================
+// Migrations S (2021-09-04)
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// CLI
+// dotnet ef migrations add InitialMigration
+// dotnet ef database update
+//
+// -------------------------------------------------------------------------
+//
+// PMC
+// ApplicationDbContext (Current App)
+// Add-Migration ApplicationDbContext_Initial -Context ApplicationDbContext
+// Update-Database -Context ApplicationDbContext
+//
+// ApplicationDbContext (Web_Api & Blazor_Server)
+// Add-Migration ApplicationDbContext_Initial -Context ApplicationDbContext -OutputDir Database/Migrations/ApplicationDbContextMigrations
+// Update-Database -Context ApplicationDbContext
+//
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// Migrations E
+//==========================================================================
+
+/*
+
+
+
+//*/
