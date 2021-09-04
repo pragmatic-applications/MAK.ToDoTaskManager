@@ -1,4 +1,4 @@
-﻿@page "/ToDoTaskManager/Admin/Create"
+﻿@page "/Admin/Create"
 
 @inherits ToDoTaskBase
 
@@ -54,15 +54,15 @@
                     <h1>Add One or more Items to the list before saving.</h1>
                     <p>A save button will appear.</p>
 
-                    <a class="@CssData.EditFormBtnThemeBlueDCss" href="@ToDoTaskManagerPageRoute.ToDoTaskManagerAdmin">
-                        Back to Admin Home
+                    <a class="@CssData.EditFormBtnThemeBlueDCss" href="@ToDoTaskManagerPageRoute.Admin">
+                        Back
                     </a>                    
                 }
                 else if(this.TaskService.Items.Count > 0)
                 {
                     <div class="grid_auto_fit">
                         <Button OnClick="this.InsertAsync" Condition="@this.CanSave" Css="@CssData.EditFormBtnThemeBlueDCss" LinkText="Save" />
-                        <LinkButton Url="@ToDoTaskManagerPageRoute.ToDoTaskManagerAdmin" Css="@CssData.EditFormBtnThemeBlueDCss">
+                        <LinkButton Url="@ToDoTaskManagerPageRoute.Admin" Css="@CssData.EditFormBtnThemeBlueDCss">
                             <UrlLink>
                                 Cancel
                             </UrlLink>
@@ -93,5 +93,5 @@
     </div>
 </div>
 <div class="page-top">
-    <NavLink href="@ToDoTaskManagerPageRoute.ToDoTaskManagerAdminCreate" class="top"></NavLink>
+    <NavLink href="@ToDoTaskManagerPageRoute.AdminCreate" class="top"></NavLink>
 </div>

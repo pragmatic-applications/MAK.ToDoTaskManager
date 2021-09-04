@@ -8,11 +8,6 @@
 // Stop: 17:00
 //=================================================================
 
-// MAK.ToDoTaskManager.BlazorServer
-// MAK.ToDoTaskManager.BlazorService
-// MAK.ToDoTaskManager.Wasm
-// MAK.ToDoTaskManager.WasmHost
-
 //==========================================================================
 // Migrations S (2021-09-04)
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

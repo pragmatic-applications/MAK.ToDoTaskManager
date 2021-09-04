@@ -1,4 +1,4 @@
-﻿@page "/ToDoTaskManager/admin/details/{Id:int}"
+﻿@page "/admin/details/{Id:int}"
 
 @inherits ToDoTaskBase
 
@@ -42,7 +42,7 @@
                 </CardText>
             </CardBody>
             <CardFooter TEntity="ToDoTaskDto" Css="card_link_group_xs card_link_group_md_3">
-                <LinkButton Url="@ToDoTaskManagerPageRoute.ToDoTaskManagerAdmin" Css="@CssData.EditFormBtnThemeBlueDCss">
+                <LinkButton Url="@ToDoTaskManagerPageRoute.Admin" Css="@CssData.EditFormBtnThemeBlueDCss">
                     <UrlLink>
                         Back
                     </UrlLink>
@@ -62,5 +62,5 @@
     }
 </div>
 <div class="page-top">
-    <NavLink href="@ToDoTaskManagerPageRoute.ToDoTaskManagerAdminDetails" class="top"></NavLink>
+    <NavLink href="@ToDoTaskManagerPageRoute.AdminDetails" class="top"></NavLink>
 </div>

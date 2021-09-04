@@ -4,14 +4,14 @@ using Domain;
 
 namespace MAK.Lib.ToDoTaskManager.Blazor
 {
-    [PageTitle("ToDoTask", true, true)]
+    [PageTitle("Home", true, true)]
     public partial class Index : ToDoTaskBase
     {
         protected override async Task OnInitializedAsync()
         {
             await base.OnInitializedAsync();
 
-            this.BannerTitleValue = "ToDoTask";
+            this.BannerTitleValue = "Home";
         }
     }
 }

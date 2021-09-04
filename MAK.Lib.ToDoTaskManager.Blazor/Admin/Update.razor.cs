@@ -17,7 +17,7 @@ namespace MAK.Lib.ToDoTaskManager.Blazor.Admin
             this.FormTitle = "Update Item";
             this.FormMode = FormMode.Update;
             this.ButtonText = "Save";
-            this.BannerTitleValue = "Admin - Update";
+            this.BannerTitleValue = "Update";
 
             this.CurrentCategoryId = this.ToDoTaskDto.ToDoTaskCategoryId;
             this.CategoryId = this.ToDoTaskDto.ToDoTaskCategoryId.ToString();

@@ -13,7 +13,7 @@ namespace MAK.Lib.ToDoTaskManager.Blazor.Admin
             this.FormTitle = "Delete Item";
             this.FormMode = FormMode.Delete;
             this.ButtonText = "Delete";
-            this.BannerTitleValue = "Admin - Delete";
+            this.BannerTitleValue = "Delete";
         }
 
         protected override async Task DeleteAsync()

@@ -69,7 +69,7 @@ namespace Domain
             this.StateHasChanged();
         }
 
-        protected override void Reload() => this.GoToPage(ToDoTaskManagerPageRoute.ToDoTaskManagerAdmin);
+        protected override void Reload() => this.GoToPage(ToDoTaskManagerPageRoute.Admin);
 
         protected override void LoadDataSuccess(PagingResponse<ToDoTaskDto> data)
         {
