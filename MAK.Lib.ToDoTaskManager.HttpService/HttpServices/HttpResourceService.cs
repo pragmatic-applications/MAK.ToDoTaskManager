@@ -3,8 +3,6 @@ using System.Net.Http;
 
 using Constants;
 
-using Domain;
-
 namespace HttpServices
 {
     public class HttpResourceService : HttpEntityServiceLite

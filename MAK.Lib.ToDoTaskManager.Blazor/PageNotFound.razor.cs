@@ -2,7 +2,7 @@
 
 using Microsoft.AspNetCore.Components;
 
-namespace MAK.Lib.ToDoTaskManager.Blazor.Views
+namespace MAK.Lib.ToDoTaskManager.Blazor
 {
     public partial class PageNotFound : CoreComponent
     {
@@ -14,7 +14,9 @@ namespace MAK.Lib.ToDoTaskManager.Blazor.Views
         {
             base.OnInitialized();
 
-            this.BannerTitleValue = "Page Not Found";
+            this.AppNameValue = "MicroTech";
+            this.BannerTitleValue = this.AppNameValue + " | " + "Page Not Found";
+            this.BrowserTitleValue = this.BannerTitleValue;
         }
 
         protected override void OnParametersSet()

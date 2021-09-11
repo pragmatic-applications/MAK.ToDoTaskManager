@@ -21,14 +21,14 @@ namespace Services
         {
             services.AddScoped<ITaskService<ToDoTaskDto>, ToDoTaskService>();
 
+            services.AddHttpClient<IHttpToDoTaskCategoryService, HttpToDoTaskCategoryService>();
             services.AddScoped<ToDoTaskCategory>();
             services.AddScoped<List<ToDoTaskCategory>>();
-            services.AddHttpClient<HttpToDoTaskCategoryService>();
 
+            services.AddHttpClient<IHttpToDoTaskService, HttpToDoTaskService>();
             services.AddScoped<ToDoTaskDto>();
             services.AddScoped<List<ToDoTaskDto>>();
-            services.AddHttpClient<HttpToDoTaskService>();
-
+            
             services.AddHttpClient<HttpImageUploaderService>();
             services.AddHttpClient<HttpResourceService>();
 

@@ -7,8 +7,6 @@ using Constants;
 
 using DTOs;
 
-using HttpServices;
-
 using Interfaces;
 
 using Microsoft.AspNetCore.Components;
@@ -24,19 +22,19 @@ namespace Domain
             await base.OnInitializedAsync();
 
             this.AppNameValue = "MicroTech";
-            this.ToDoTaskDto = new();
+            this.ToDoTaskDto = new(); // Todo: check if I really need to do this here.
 
             await this.GetEntityCategoryAsync();
             await this.GetAsync();
         }
 
         [Inject] public ITaskService<ToDoTaskDto> TaskService { get; set; }
-        [Inject] public HttpToDoTaskCategoryService HttpToDoTaskCategoryService { get; set; }
 
+        [Inject] public IHttpToDoTaskService HttpToDoTaskService { get; set; }
         [Inject] public ToDoTaskDto ToDoTaskDto { get; set; }
         [Inject] public List<ToDoTaskDto> ToDoTaskDtos { get; set; }
-        [Inject] public HttpToDoTaskService HttpToDoTaskService { get; set; }
 
+        [Inject] public IHttpToDoTaskCategoryService HttpToDoTaskCategoryService { get; set; }
         [Inject] public List<ToDoTaskCategory> Categories { get; set; }
 
         public PagingResponse<ToDoTaskDto> PagingResponse { get; set; }

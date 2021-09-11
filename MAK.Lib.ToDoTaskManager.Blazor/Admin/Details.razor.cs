@@ -15,7 +15,10 @@ namespace MAK.Lib.ToDoTaskManager.Blazor.Admin
             this.UrlUpdate = $"{ToDoTaskManagerPageRoute.S_ToDoTaskManagerAdminUpdate_S}{this.ToDoTaskDto.Id}";
             this.UrlDelete = $"{ToDoTaskManagerPageRoute.S_ToDoTaskManagerAdminDelete_S}{this.ToDoTaskDto.Id}";
 
-            this.BannerTitleValue = "Admin - Details";
+            this.AppNameValue = "MicroTech";
+
+            this.BannerTitleValue = this.AppNameValue + " | " + "Admin Details";
+            this.BrowserTitleValue = this.BannerTitleValue;
         }
     }
 }

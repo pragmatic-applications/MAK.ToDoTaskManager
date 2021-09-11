@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
@@ -11,12 +11,12 @@
     <ItemGroup>
         <PackageReference Include="MAK.Lib.Blazor.ImageUploader" Version="0.0.0.1" />
         <PackageReference Include="MAK.Lib.BlazorCard" Version="0.0.0.1" />
-        <PackageReference Include="MAK.Lib.BlazorUI" Version="0.0.0.1" />
+        <PackageReference Include="MAK.Lib.BlazorUI" Version="0.0.0.5" />
         <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.9" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\MAK.Lib.ToDoTaskManager.Interface\MAK.Lib.ToDoTaskManager.Interface.csproj" />
+      <ProjectReference Include="..\MAK.Lib.ToDoTaskManager.HttpService\MAK.Lib.ToDoTaskManager.HttpService.csproj" />
     </ItemGroup>
 
 </Project>

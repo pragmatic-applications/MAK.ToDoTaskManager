@@ -3,7 +3,13 @@
 
 @inherits ToDoTaskBase
 
-<Banner BannerTitleParameter="@this.BannerTitleValue" AppNameParameter="@this.AppNameValue" />
+<CascadingValue Value="this.BrowserTitleValue" Name="@nameof(CascadingData.BrowserTitleCascadingValue)" IsFixed="false">
+    <CascadingValue Value="this.BannerTitleValue" Name="@nameof(CascadingData.BannerTitleCascadingValue)" IsFixed="false">
+        <CascadingValue Value="this.AppNameValue" Name="@nameof(CascadingData.AppNameCascadingValue)" IsFixed="false">
+            <Banner />
+        </CascadingValue>
+    </CascadingValue>
+</CascadingValue>
 
 <div class="center_max_width_lg">
 
@@ -13,7 +19,7 @@
     }
     else
     {
-        <CascadingValue Value="this.ToDoTaskDtos" Name="@nameof(CascadingData.ToDoTaskEntitiesParameterValue)" IsFixed="false">
+        <CascadingValue Value="this.ToDoTaskDtos" Name="@nameof(CascadingDataValue.ToDoTaskEntitiesParameterValue)" IsFixed="false">
             <ToDoTaskAdminIndexContainer />
         </CascadingValue>
     }

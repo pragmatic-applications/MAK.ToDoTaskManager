@@ -7,9 +7,11 @@ using Constants;
 
 using Domain;
 
+using Interfaces;
+
 namespace HttpServices
 {
-    public class HttpToDoTaskCategoryService : HttpEntityService<ToDoTaskCategory>
+    public class HttpToDoTaskCategoryService : HttpEntityService<ToDoTaskCategory>, IHttpToDoTaskCategoryService
     {
         public HttpToDoTaskCategoryService(HttpClient httpClient) : base(httpClient)
         {

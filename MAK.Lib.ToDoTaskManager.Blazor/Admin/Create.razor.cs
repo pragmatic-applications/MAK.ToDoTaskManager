@@ -11,7 +11,11 @@ namespace MAK.Lib.ToDoTaskManager.Blazor.Admin
             this.FormTitle = "Add Entry";
             this.FormMode = FormMode.Create;
             this.ButtonText = "Save";
-            this.BannerTitleValue = "Create";
+
+            this.AppNameValue = "MicroTech";
+
+            this.BannerTitleValue = this.AppNameValue + " | " + "Create";
+            this.BrowserTitleValue = this.BannerTitleValue;
         }
 
         public bool TitleState { get; set; }

@@ -11,7 +11,8 @@ namespace MAK.Lib.ToDoTaskManager.Blazor.Admin
         {
             await base.OnInitializedAsync();
 
-            this.BannerTitleValue = "Admin";
+            this.BannerTitleValue = this.AppNameValue + " | " + "Admin Home";
+            this.BrowserTitleValue = this.BannerTitleValue;
         }
     }
 }

@@ -12,7 +12,7 @@ namespace MAK.Lib.ToDoTaskManager.Blazor
 {
     public partial class ToDoTaskIndexContainer : Component
     {
-        [CascadingParameter(Name = nameof(CascadingData.ToDoTaskEntitiesParameterValue))]
+        [CascadingParameter(Name = nameof(CascadingDataValue.ToDoTaskEntitiesParameterValue))]
         public List<ToDoTaskDto> EntitiesCascadingParameter { get; set; }
         private string GetState(ToDoTaskDto item) => item.Complete ? "Yes" : "No";
         private string GetId(ToDoTaskDto item) => item.Id < 10 ? $"0{item.Id}" : $"{item.Id}";

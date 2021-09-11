@@ -17,10 +17,14 @@ namespace MAK.Lib.ToDoTaskManager.Blazor.Admin
             this.FormTitle = "Update Item";
             this.FormMode = FormMode.Update;
             this.ButtonText = "Save";
-            this.BannerTitleValue = "Update";
 
             this.CurrentCategoryId = this.ToDoTaskDto.ToDoTaskCategoryId;
             this.CategoryId = this.ToDoTaskDto.ToDoTaskCategoryId.ToString();
+
+            this.AppNameValue = "MicroTech";
+
+            this.BannerTitleValue = this.AppNameValue + " | " + "Update";
+            this.BrowserTitleValue = this.BannerTitleValue;
         }
 
         public CategoryFeedback GetCategoryFeedback()

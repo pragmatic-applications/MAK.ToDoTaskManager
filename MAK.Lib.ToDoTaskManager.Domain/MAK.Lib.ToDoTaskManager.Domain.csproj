@@ -9,6 +9,8 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="Lib_Generic_Crud_Interface" Version="0.0.0.2" />
+        <PackageReference Include="Lib_Http_Interface" Version="0.0.0.2" />
         <PackageReference Include="Lib_Core_Interface" Version="0.0.0.1" />
 
         <PackageReference Include="MAK.Lib.Core" Version="0.0.0.1" />

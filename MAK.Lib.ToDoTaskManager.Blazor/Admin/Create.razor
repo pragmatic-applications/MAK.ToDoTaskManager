@@ -2,7 +2,13 @@
 
 @inherits ToDoTaskBase
 
-<Banner BannerTitleParameter="@this.BannerTitleValue" AppNameParameter="@this.AppNameValue" />
+<CascadingValue Value="this.BrowserTitleValue" Name="@nameof(CascadingData.BrowserTitleCascadingValue)" IsFixed="false">
+    <CascadingValue Value="this.BannerTitleValue" Name="@nameof(CascadingData.BannerTitleCascadingValue)" IsFixed="false">
+        <CascadingValue Value="this.AppNameValue" Name="@nameof(CascadingData.AppNameCascadingValue)" IsFixed="false">
+            <Banner />
+        </CascadingValue>
+    </CascadingValue>
+</CascadingValue>
 
 <div class="container_basic">
     <h5 class="text_center">@this.FormTitle</h5>
@@ -56,7 +62,7 @@
 
                     <a class="@CssData.EditFormBtnThemeBlueDCss" href="@ToDoTaskManagerPageRoute.Admin">
                         Back
-                    </a>                    
+                    </a>
                 }
                 else if(this.TaskService.Items.Count > 0)
                 {

@@ -5,15 +5,15 @@ using System.Threading.Tasks;
 
 using Constants;
 
-using Domain;
-
 using DTOs;
+
+using Interfaces;
 
 using PageFeatures;
 
 namespace HttpServices
 {
-    public class HttpToDoTaskService : HttpEntityService<ToDoTaskDto>
+    public class HttpToDoTaskService : HttpEntityService<ToDoTaskDto>, IHttpToDoTaskService
     {
         public HttpToDoTaskService(HttpClient httpClient) : base(httpClient)
         {

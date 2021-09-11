@@ -1,0 +1,31 @@
+﻿@page "/not-found"
+
+@inherits CoreComponent
+
+<CascadingValue Value="this.BrowserTitleValue" Name="@nameof(CascadingData.BrowserTitleCascadingValue)" IsFixed="false">
+    <CascadingValue Value="this.BannerTitleValue" Name="@nameof(CascadingData.BannerTitleCascadingValue)" IsFixed="false">
+        <CascadingValue Value="this.AppNameValue" Name="@nameof(CascadingData.AppNameCascadingValue)" IsFixed="false">
+            <Banner />
+        </CascadingValue>
+    </CascadingValue>
+</CascadingValue>
+
+<div class="main HRuleA ImageRoundDefault ImageRadiusBackgroundDefault pad_bottom_60">
+    <div class="container">
+
+        <p class="pt-4 text_center pad_bottom_40">Page Not Found</p>
+
+        <div class="photo text_center">
+            <NavLink href="/" class="BasicButton">
+                <img class="img_circle max_width_200" src="@this.NotFoundImage" />
+                <p class="text_center">
+                    Home
+                </p>
+            </NavLink>
+        </div>
+    </div>
+</div>
+
+<div class="page-top">
+    <NavLink href="not-found" class="top"></NavLink>
+</div>

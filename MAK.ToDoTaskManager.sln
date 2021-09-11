@@ -15,8 +15,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAK.Lib.ToDoTaskManager.Dat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAK.Lib.ToDoTaskManager.Domain", "MAK.Lib.ToDoTaskManager.Domain\MAK.Lib.ToDoTaskManager.Domain.csproj", "{45BF7828-87C6-47AE-8CA7-B81855ED39F3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAK.Lib.ToDoTaskManager.Interface", "MAK.Lib.ToDoTaskManager.Interface\MAK.Lib.ToDoTaskManager.Interface.csproj", "{931CE4CC-E76E-4215-A44B-E47AE7CFC3CA}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAK.Lib.ToDoTaskManager.Repository", "MAK.Lib.ToDoTaskManager.Repository\MAK.Lib.ToDoTaskManager.Repository.csproj", "{3B9BD071-D517-43C7-AFD1-B7CA8EC0C143}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAK.ToDoTaskManager.ServerApi", "MAK.ToDoTaskManager.ServerApi\MAK.ToDoTaskManager.ServerApi.csproj", "{DDA2FBCA-2EFF-40C9-A614-6C48AEC84C21}"
@@ -28,6 +26,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAK.ToDoTaskManager.Wasm", "MAK.ToDoTaskManager.Wasm\MAK.ToDoTaskManager.Wasm.csproj", "{6EC7FC07-6B53-4297-A9A3-929A95B29003}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAK.ToDoTaskManager.WasmHost", "MAK.ToDoTaskManager.WasmHost\MAK.ToDoTaskManager.WasmHost.csproj", "{4CD01F67-DE44-4389-B92D-EAE07B3AED79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAK.Lib.ToDoTaskManager.HttpService", "MAK.Lib.ToDoTaskManager.HttpService\MAK.Lib.ToDoTaskManager.HttpService.csproj", "{B528C58C-CAD1-48B0-A0BA-AF5E545148E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,6 @@ Global
 		{45BF7828-87C6-47AE-8CA7-B81855ED39F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45BF7828-87C6-47AE-8CA7-B81855ED39F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45BF7828-87C6-47AE-8CA7-B81855ED39F3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{931CE4CC-E76E-4215-A44B-E47AE7CFC3CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{931CE4CC-E76E-4215-A44B-E47AE7CFC3CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{931CE4CC-E76E-4215-A44B-E47AE7CFC3CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{931CE4CC-E76E-4215-A44B-E47AE7CFC3CA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3B9BD071-D517-43C7-AFD1-B7CA8EC0C143}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3B9BD071-D517-43C7-AFD1-B7CA8EC0C143}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B9BD071-D517-43C7-AFD1-B7CA8EC0C143}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -75,6 +71,10 @@ Global
 		{4CD01F67-DE44-4389-B92D-EAE07B3AED79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CD01F67-DE44-4389-B92D-EAE07B3AED79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CD01F67-DE44-4389-B92D-EAE07B3AED79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B528C58C-CAD1-48B0-A0BA-AF5E545148E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B528C58C-CAD1-48B0-A0BA-AF5E545148E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B528C58C-CAD1-48B0-A0BA-AF5E545148E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B528C58C-CAD1-48B0-A0BA-AF5E545148E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
